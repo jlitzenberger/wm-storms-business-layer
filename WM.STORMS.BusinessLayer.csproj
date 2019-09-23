@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B4100BD-B4D9-47AC-8CC5-9CB82E59EAEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WM.STORMS.BusinessLayer</RootNamespace>
+    <AssemblyName>WM.STORMS.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stage|AnyCPU'">
+    <OutputPath>bin\Stage\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="amqmdnet, Version=7.5.0.3, Culture=neutral, PublicKeyToken=dd3cb1c9aae9ec97, processorArchitecture=MSIL">
+      <HintPath>packages\WM.Common.1.0.1\lib\net45\amqmdnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="amqmdxcs, Version=7.5.0.3, Culture=neutral, PublicKeyToken=7a58d55a51981a15, processorArchitecture=MSIL">
+      <HintPath>packages\WM.Common.1.0.1\lib\net45\amqmdxcs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.81.0.1407, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SnmpSharpNet, Version=0.9.5.0, Culture=neutral, PublicKeyToken=b2181aa3b9571feb, processorArchitecture=MSIL">
+      <HintPath>packages\SnmpSharpNet.0.9.5\lib\SnmpSharpNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WM.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WM.Common.1.0.1\lib\net45\WM.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WM.STORMS.DataAccessLayer, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WM.STORMS.DataAccessLayer.1.0.0.1\lib\net45\WM.STORMS.DataAccessLayer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\AddressBl.cs" />
+    <Compile Include="BusinessLogic\ApiExceptionsLoggerBl.cs" />
+    <Compile Include="BusinessLogic\ApiLoggerBl.cs" />
+    <Compile Include="BusinessLogic\AreaBl.cs" />
+    <Compile Include="BusinessLogic\AssociatedPartyBl.cs" />
+    <Compile Include="BusinessLogic\AttribBl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLogic\CostAdjustmentBl.cs" />
+    <Compile Include="BusinessLogic\CrewBl.cs" />
+    <Compile Include="BusinessLogic\DamageBl.cs" />
+    <Compile Include="BusinessLogic\DamageReportBl.cs" />
+    <Compile Include="BusinessLogic\FieldOrderAttachmentIdBl.cs" />
+    <Compile Include="BusinessLogic\IFErrorBl.cs" />
+    <Compile Include="BusinessLogic\IFExceptionCondBl.cs" />
+    <Compile Include="BusinessLogic\IFExtDsgnFacAttBl.cs" />
+    <Compile Include="BusinessLogic\IFExtDsgnPointBl.cs" />
+    <Compile Include="BusinessLogic\IFMobileCompletionBl.cs" />
+    <Compile Include="BusinessLogic\IFWorkpacketScheduleBl.cs" />
+    <Compile Include="BusinessLogic\LeakGeneralBl.cs" />
+    <Compile Include="BusinessLogic\MobileRemarkTypesBl.cs" />
+    <Compile Include="BusinessLogic\MUStructureBl.cs" />
+    <Compile Include="BusinessLogic\OperatorPasswordBl.cs" />
+    <Compile Include="BusinessLogic\PointBl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLogic\RemarkTypeBl.cs" />
+    <Compile Include="BusinessLogic\DocumentBlobBl.cs" />
+    <Compile Include="BusinessLogic\DocumentBl.cs" />
+    <Compile Include="BusinessLogic\BaseBl.cs" />
+    <Compile Include="BusinessLogic\CUAsbBl.cs" />
+    <Compile Include="BusinessLogic\PointASBBl.cs" />
+    <Compile Include="BusinessLogic\ResolutionBl.cs" />
+    <Compile Include="BusinessLogic\UnitDetailBl.cs" />
+    <Compile Include="BusinessLogic\CrewHqBl.cs" />
+    <Compile Include="BusinessLogic\CUBl.cs" />
+    <Compile Include="BusinessLogic\CUFacilityAttributeBl.cs" />
+    <Compile Include="BusinessLogic\CuJobCodeBl.cs" />
+    <Compile Include="BusinessLogic\CustomerBl.cs" />
+    <Compile Include="BusinessLogic\CUStructureBl.cs" />
+    <Compile Include="BusinessLogic\DistrictBl.cs" />
+    <Compile Include="BusinessLogic\EquipmentBl.cs" />
+    <Compile Include="BusinessLogic\ExceptionConditionBl.cs" />
+    <Compile Include="BusinessLogic\ExtraDetailsBl.cs" />
+    <Compile Include="BusinessLogic\FacilityAttributeBl.cs" />
+    <Compile Include="BusinessLogic\FacilityBl.cs" />
+    <Compile Include="BusinessLogic\GasLoadDetailBl.cs" />
+    <Compile Include="BusinessLogic\GeoBl.cs" />
+    <Compile Include="BusinessLogic\JobCodeBl.cs" />
+    <Compile Include="BusinessLogic\JobTypeBl.cs" />
+    <Compile Include="BusinessLogic\MilestoneRequirementBl.cs" />
+    <Compile Include="BusinessLogic\OperBl.cs" />
+    <Compile Include="BusinessLogic\PremiseBl.cs" />
+    <Compile Include="BusinessLogic\PremiseMoreBl.cs" />
+    <Compile Include="BusinessLogic\RemarkBl.cs" />
+    <Compile Include="BusinessLogic\WeTWorkAllocBl.cs" />
+    <Compile Include="BusinessLogic\WorkPacketBl.cs" />
+    <Compile Include="BusinessLogic\LaborDetailBl.cs" />
+    <Compile Include="BusinessLogic\MaterialItemBl.cs" />
+    <Compile Include="BusinessLogic\WorkpacketHistoryBl.cs" />
+    <Compile Include="BusinessLogic\WorkRequestKeyGenerator.cs" />
+    <Compile Include="BusinessLogic\WorkRequestNonDesignedBl.cs" />
+    <Compile Include="BusinessLogic\WorkTypeBl.cs" />
+    <Compile Include="BusinessLogic\WRTrackingBl.cs" />
+    <Compile Include="BusinessLogic\ZoneBl.cs" />
+    <Compile Include="BusinessLogic\IFExtDsgnCUBl.cs" />
+    <Compile Include="BusinessLogic\CUEstBl.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\ApiException.cs" />
+    <Compile Include="Models\ApiLogger.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\AssociatedParty.cs" />
+    <Compile Include="Models\Attrib.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CostAdjustment.cs" />
+    <Compile Include="Models\Crew.cs" />
+    <Compile Include="Models\CUEst.cs" />
+    <Compile Include="Models\Damage.cs" />
+    <Compile Include="Models\DamageReport.cs" />
+    <Compile Include="Models\FieldOrderAttachmentId.cs" />
+    <Compile Include="Models\IFError.cs" />
+    <Compile Include="Models\IFExceptionCond.cs" />
+    <Compile Include="Models\IFExtDsgnCU.cs" />
+    <Compile Include="Models\IFExtDsgnFacAtt.cs" />
+    <Compile Include="Models\IFExtDsgnPoint.cs" />
+    <Compile Include="Models\IFMobileCompletion.cs" />
+    <Compile Include="Models\IFWorkpacketSchedule.cs" />
+    <Compile Include="Models\LeakGeneral.cs" />
+    <Compile Include="Models\MobileRemarkTypes.cs" />
+    <Compile Include="Models\OperatorPassword.cs" />
+    <Compile Include="Models\RemarkType.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\CuAsbTransformer.cs" />
+    <Compile Include="Models\CUAsb.cs" />
+    <Compile Include="Models\PointAsb.cs" />
+    <Compile Include="Models\CrewHq.cs" />
+    <Compile Include="Models\CU.cs" />
+    <Compile Include="Models\CUFacilityAttribute.cs" />
+    <Compile Include="Models\CuJobCode.cs" />
+    <Compile Include="Models\CuJobCodePointTransformer.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CUStructure.cs" />
+    <Compile Include="Models\CuTransformer.cs" />
+    <Compile Include="Models\Design.cs" />
+    <Compile Include="Models\District.cs" />
+    <Compile Include="Models\DocumentBlob.cs" />
+    <Compile Include="Models\Equipment.cs" />
+    <Compile Include="Models\ExceptionCondition.cs" />
+    <Compile Include="Models\ExtDesignKey.cs" />
+    <Compile Include="Models\ExtraDetails.cs" />
+    <Compile Include="Models\Facility.cs" />
+    <Compile Include="Models\FacilityAttribute.cs" />
+    <Compile Include="Models\FieldReports.cs" />
+    <Compile Include="Models\GasLoadDetail.cs" />
+    <Compile Include="Models\GDC.cs" />
+    <Compile Include="Models\Geo.cs" />
+    <Compile Include="Models\JobCode.cs" />
+    <Compile Include="Models\JobType.cs" />
+    <Compile Include="Models\LaborDetail.cs" />
+    <Compile Include="Models\MaterialItem.cs" />
+    <Compile Include="Models\MilestoneRequirement.cs" />
+    <Compile Include="Models\MUStructure.cs" />
+    <Compile Include="Models\Oper.cs" />
+    <Compile Include="Models\PremiseMore.cs" />
+    <Compile Include="Models\Phones.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\Premise.cs" />
+    <Compile Include="Models\Remark.cs" />
+    <Compile Include="Models\Resolution.cs" />
+    <Compile Include="Models\UnitDetail.cs" />
+    <Compile Include="Models\WeTWorkAlloc.cs" />
+    <Compile Include="Models\WMException.cs" />
+    <Compile Include="Models\WorkPacket.cs" />
+    <Compile Include="Models\WorkPacketHistory.cs" />
+    <Compile Include="Models\WorkRequest.cs" />
+    <Compile Include="Models\WorkRequestNonDesigned.cs" />
+    <Compile Include="Models\WorkType.cs" />
+    <Compile Include="Models\WRTracking.cs" />
+    <Compile Include="Models\Zone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\DesignBl.cs" />
+    <Compile Include="BusinessLogic\WorkRequestBl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\ICSharpCode.SharpZipLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"J:\DATA\WM\wm_secure\Developer Resources\_NET\NuGet\nuget.exe" pack "$(ProjectPath)" -Prop Platform=AnyCPU;Configuration=$(ConfigurationName) -symbols 
+if not exist "J:\DATA\WM\wm_secure\Developer Resources\_NET\NuGetRepo_%25username%25" mkdir "J:\DATA\WM\wm_secure\Developer Resources\_NET\NuGetRepo_%25username%25"
+copy "$(TargetDir)*.nupkg" "J:\DATA\WM\wm_secure\Developer Resources\_NET\NuGetRepo_%25username%25"
+del "$(TargetDir)*.nupkg"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
